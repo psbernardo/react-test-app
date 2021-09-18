@@ -1,0 +1,91 @@
+/*override dropzone style*/
+.dzu-dropzone {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  border-style: dashed;
+}
+.dzu-previewContainer {
+  padding: 20px;
+  display: unset;
+  flex-direction: unset;
+  align-items: unset;
+  justify-content: unset;
+  border: none;
+  min-height: unset;
+  height: 240px;
+  text-align: center;
+}
+.dzu-previewContainer > span {
+  display: block;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+.dzu-previewContainer > span:nth-child(2) {
+  color: red;
+}
+.dzu-previewContainer > .dzu-previewFileNameError {
+  margin-top: 50px;
+  width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dzu-previewContainer > .dzu-previewButton {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background: #e0e2e3;
+  color: #70737c;
+  border-radius: 20px;
+  width: 26px;
+  height: 26px;
+  background-size: 12px 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.dzu-dropzone {
+  min-height: 243px;
+  min-width: 280px;
+  overflow: auto;
+}
+.dzu-inputLabel {
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: #3d3f57;
+}
+.dzu-submitButtonContainer,
+.dzu-inputLabelWithFiles {
+  display: none;
+}
+.dzu-previewStatusContainer {
+  position: absolute;
+  top: 37px;
+  right: 16px;
+  padding: 5px 3px 3px 3px;
+  background: #e0e2e3;
+  color: #70737c;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+.dzu-previewStatusContainer:hover {
+  opacity: 0.6;
+}
+.dzu-previewButton {
+  background-size: 12px 12px;
+  width: 12px;
+  height: 12px;
+  margin-top: 1px;
+  margin-left: 5px;
+}
+.dzu-previewImage {
+  width: 222px;
+  height: 203px;
+  max-height: unset;
+  max-width: unset;
+  object-fit: contain;
+  display: inline;
+}
