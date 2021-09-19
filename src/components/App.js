@@ -6,13 +6,11 @@ import Layout from './Layout';
 import authSvc from '../services/AuthService';
 
 // pages
-import Error from 'pages/error';
+
 import Login from 'pages/login';
-import Logout from '../pages/logout/logout';
-import MarginRequirementDetails from 'pages/MarginRequirement/MarginRequirementDetails';
-import SegregationLockupTable from 'pages/Segregation/Components/SegregationLockUpTable';
-import Transaction from 'pages/Transaction/Transaction';
-import ChangePassword from '../pages/ChangePassword/ChangePassword';
+
+
+
 
 export default function App() {
   useEffect(() => {
@@ -51,21 +49,12 @@ export default function App() {
           render={() => <Redirect to="/app/account-setup/user" />}
         />
         <PrivateRoute path="/app" component={Layout} />
-        <PrivateRoute
-          path="/margin-interest/margin-requirement-details/:tradeDate?/:masterAccountNo?"
-          component={MarginRequirementDetails}
-        />
-        <PrivateRoute
-          path="/segregation/segregation-lockup/:settleDate?/:numberOrCusip?/:type?"
-          component={SegregationLockupTable}
-        />
-        <PrivateRoute
-          path="/app/trns/transaction/cancel-and-correct/:trnsId?/:accountId?"
-          component={Transaction}
-        />
+       
+      
+      
         <PublicRoute path="/login" component={Login} />
-        <Route path="/logout" component={Logout} />
-        <Route path="/app/change-password/" component={ChangePassword} />
+      
+      
         <Route component={Error} />
       </Switch>
     </BrowserRouter>

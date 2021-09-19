@@ -6,9 +6,9 @@ import {
 } from '../proto/admpb/profile_grpc_web_pb';
 import { auth } from '../lib/auth/Auth';
 import { padString, stringToProtoDate } from './ConvertService';
-
+const {REACT_APP_GRPC_ENDPOINT} = process.env;
 const service = new ProfileServiceClient(
-  window.env.GRPC_ENDPOINT,
+  REACT_APP_GRPC_ENDPOINT,
   {},
   { ...auth }
 );

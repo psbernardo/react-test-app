@@ -11,9 +11,9 @@ import {
 } from '../proto/usrpb/administrator_grpc_web_pb';
 import { notifyError } from 'components/Notification/Notification';
 import { auth } from '../lib/auth/Auth';
-
+const {REACT_APP_GRPC_ENDPOINT} = process.env;
 const service = new AdministratorServiceClient(
-  window.env.GRPC_ENDPOINT,
+  REACT_APP_GRPC_ENDPOINT,
   {},
   { ...auth }
 );
