@@ -10,11 +10,11 @@ import {
 } from '../proto/authpb/auth_grpc_web_pb';
 
 import { auth } from '../lib/auth/Auth';
-
+const {REACT_APP_GRPC_ENDPOINT, TESTDB} = process.env;
 const tokenKey = 'id_token';
 const refreshTokenKey = 'refresh_token';
 const authMsgKey = 'auth_error';
-const client = new AuthServiceClient(window.env.GRPC_ENDPOINT);
+const client = new AuthServiceClient(REACT_APP_GRPC_ENDPOINT);
 let userAccess = undefined;
 
 export function getToken() {
@@ -77,10 +77,10 @@ export function refreshToken(auth) {
   //if token will about to expire then request a new one
   let req = new RefreshTokenRequest();
   req.setRefreshToken(localStorage.getItem(refreshTokenKey));
-  req.setClientId(window.env.GRPC_CLIENT_ID);
+  req.setClientId(REACT_APP_GRPC_ENDPOINT);
 
   const service = new AuthServiceClient(
-    window.env.GRPC_ENDPOINT,
+    REACT_APP_GRPC_ENDPOINT,
     {},
     { ...auth }
   );
@@ -105,7 +105,7 @@ async function loginPromise(data) {
     req.setEmail(data.email);
     req.setPassword(data.password);
     req.setMode(data.mode);
-    req.setClientId(window.env.GRPC_CLIENT_ID);
+    req.setClientId(REACT_APP_GRPC_ENDPOINT);
     req.setAuthenticationMode(data.authenticationMode);
 
     client.login(req, {}, (error, response) => {
@@ -161,7 +161,7 @@ export function getPages() {
 
 export function validateAuthCode(param) {
   const service = new AuthServiceClient(
-    window.env.GRPC_ENDPOINT,
+    REACT_APP_GRPC_ENDPOINT,
     {},
     { ...auth }
   );
@@ -189,7 +189,7 @@ export function validateAuthCode(param) {
 
 export function changePassword(param) {
   const service = new AuthServiceClient(
-    window.env.GRPC_ENDPOINT,
+    REACT_APP_GRPC_ENDPOINT,
     {},
     { ...auth }
   );
