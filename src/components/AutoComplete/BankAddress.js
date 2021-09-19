@@ -18,7 +18,7 @@ import { auth } from '../../lib/auth/Auth';
 import { getArrayKeyIndex } from 'lib/utils/utils';
 
 const service = new BankAddressServiceClient(
-  window.env.GRPC_ENDPOINT,
+  REACT_APP_GRPC_ENDPOINT,
   {},
   { ...auth }
 );

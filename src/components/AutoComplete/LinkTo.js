@@ -13,7 +13,7 @@ import {
 import { auth } from '../../lib/auth/Auth';
 
 const userGuide = new UserGuideServiceClient(
-  window.env.GRPC_ENDPOINT,
+  REACT_APP_GRPC_ENDPOINT,
   {},
   { ...auth }
 );

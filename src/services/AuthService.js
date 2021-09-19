@@ -10,7 +10,7 @@ import {
 } from '../proto/authpb/auth_grpc_web_pb';
 
 import { auth } from '../lib/auth/Auth';
-const {REACT_APP_GRPC_ENDPOINT, TESTDB} = process.env;
+const {REACT_APP_GRPC_ENDPOINT} = process.env;
 const tokenKey = 'id_token';
 const refreshTokenKey = 'refresh_token';
 const authMsgKey = 'auth_error';
