@@ -39,33 +39,33 @@ import { stringToProtoDate } from './ConvertService';
 
 import { auth } from '../lib/auth/Auth';
 import download from './DownloadService';
-
+const {REACT_APP_GRPC_ENDPOINT} = process.env;
 const listService = new ListServiceClient(
-  window.env.GRPC_ENDPOINT,
+  REACT_APP_GRPC_ENDPOINT,
   {},
   { ...auth }
 );
 
 const lazyService = new LazyAccountServiceClient(
-  window.env.GRPC_ENDPOINT,
+  REACT_APP_GRPC_ENDPOINT,
   {},
   { ...auth }
 );
 
 const noteService = new NoteServiceClient(
-  window.env.GRPC_ENDPOINT,
+  REACT_APP_GRPC_ENDPOINT,
   {},
   { ...auth }
 );
 
 const fileService = new FileServiceClient(
-  window.env.GRPC_ENDPOINT,
+  REACT_APP_GRPC_ENDPOINT,
   {},
   { ...auth }
 );
 
 const systemCodeService = new LazySystemCodeServiceClient(
-  window.env.GRPC_ENDPOINT,
+  REACT_APP_GRPC_ENDPOINT,
   {},
   { ...auth }
 );
