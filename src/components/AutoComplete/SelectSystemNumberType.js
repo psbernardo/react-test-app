@@ -13,7 +13,7 @@ import debounce from 'lodash/debounce';
 import { notifyError } from 'components/Notification/Notification';
 import { auth } from '../../lib/auth/Auth';
 const listType = new SystemNumberServiceClient(
-  REACT_APP_GRPC_ENDPOINT,
+  window.env.GRPC_ENDPOINT,
   {},
   { ...auth }
 );

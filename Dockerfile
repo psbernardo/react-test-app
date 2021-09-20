@@ -14,7 +14,7 @@ WORKDIR /etc/nginx
 ADD nginx.conf /etc/nginx/nginx.conf
 
 COPY --from=build /app/build /usr/share/nginx/html
-ENV REACT_APP_GRPC_ENDPOINT=http://localhost:9011
-ENV REACT_APP_GRPC_CLIENT_ID=tzero.softwarealgo.com
+# ENV window.env.GRPC_ENDPOINT=http://localhost:9011
+# ENV REACT_APP_GRPC_CLIENT_ID=tzero.softwarealgo.com
 EXPOSE 443
 CMD ["nginx", "-g", "daemon off;"]

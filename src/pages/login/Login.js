@@ -30,7 +30,7 @@ import useStyles from './styles';
 import { auth } from 'lib/auth/Auth';
 
 function Login(props) {
-  const {REACT_APP_GRPC_ENDPOINT, TESTDB} = process.env;
+ // const { } = process.env;
   const classes = useStyles();
   // local
   const [errorMsg, setErrorMsg] = useState('');
@@ -57,11 +57,11 @@ function Login(props) {
 
 
   const service = new UserServiceClient(
-    REACT_APP_GRPC_ENDPOINT,
+     window.env.GRPC_ENDPOINT,
     {},
   );
 
-  console.log(REACT_APP_GRPC_ENDPOINT);
+  console.log(window.env.GRPC_ENDPOINT);
   
   const handleSubmit = async (e) => {
     e.preventDefault();
