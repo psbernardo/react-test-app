@@ -1,8 +1,4 @@
 .git
-.env*
-.env.*
-env.js
 build
-/public/env.js
 node_modules
 npm-debug.log

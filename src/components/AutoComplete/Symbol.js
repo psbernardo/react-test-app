@@ -15,7 +15,7 @@ import {
 import { auth } from '../../lib/auth/Auth';
 
 const listClient = new ListServiceClient(
-  REACT_APP_GRPC_ENDPOINT,
+  window.env.GRPC_ENDPOINT,
   {},
   { ...auth }
 );
